@@ -1,0 +1,33 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Contracts\Storable;
+
+class DummyClass implements Storable
+{
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Get file path in storage.
+     *
+     * @return string
+     */
+    public function getCacheFilePath(): string
+    {
+        return ".json";
+    }
+
+    /**
+     * Get string representation of object to store.
+     *
+     * @return string
+     */
+    public function getCacheContents(): string
+    {
+        return json_encode([]);
+    }
+}
