@@ -30,7 +30,7 @@ class DeleteStorableFile
      */
     public function handle(Storable $storable): void
     {
-        $path = $storable->getCacheFilePath();
+        $path = $storable->getFilePath();
 
         Storage::disk($this->disk)
             ->delete($path);

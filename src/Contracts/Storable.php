@@ -9,12 +9,12 @@ interface Storable
      *
      * @return string
      */
-    public function getCacheFilePath(): string;
+    public function getFilePath(): string;
 
     /**
      * Get string representation of object to store.
      *
      * @return string
      */
-    public function getCacheContents(): string;
+    public function getContents(): string;
 }

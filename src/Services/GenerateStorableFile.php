@@ -30,8 +30,8 @@ class GenerateStorableFile
      */
     public function handle(Storable $storable): void
     {
-        $path = $storable->getCacheFilePath();
-        $contents = $storable->getCacheContents();
+        $path = $storable->getFilePath();
+        $contents = $storable->getContents();
 
         Storage::disk($this->disk)
             ->put($path, $contents);
