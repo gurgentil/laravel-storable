@@ -9,6 +9,9 @@ use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
 class ServiceProvider extends IlluminateServiceProvider
 {
+    /**
+     * Register the application services.
+     */
     public function register(): void
     {
         $this->app->bind('delete-storable-file', static function () {
