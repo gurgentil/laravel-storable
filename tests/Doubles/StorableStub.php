@@ -2,9 +2,9 @@
 
 namespace Gurgentil\LaravelStorable\Test\Doubles;
 
-use Gurgentil\LaravelStorable\Contracts\Storable;
+use Gurgentil\LaravelStorable\Storable;
 
-class StorableStub implements Storable
+class StorableStub extends Storable
 {
     public function getFilePath(): string
     {

@@ -2,9 +2,9 @@
 
 namespace DummyNamespace;
 
-use App\Contracts\Storable;
+use Gurgentil\LaravelStorable\Storable;
 
-class DummyClass implements Storable
+class DummyClass extends Storable
 {
     public function __construct()
     {
