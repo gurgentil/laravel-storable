@@ -15,10 +15,12 @@ class DeleteStorableFile
 
     /**
      * GenerateStorableFile constructor.
+     *
+     * @param string|null $disk
      */
-    public function __construct()
+    public function __construct(?string $disk = null)
     {
-        $this->disk = Config::get('storable.disk');
+        $this->disk = $disk ?? Config::get('storable.disk');
     }
 
     /**
