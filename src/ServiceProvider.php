@@ -18,6 +18,8 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->app->bind('generate-storable-file', static function () {
             return new GenerateStorableFile;
         });
+
+        $this->mergeConfigFrom(__DIR__ . '/../config/storable.php', 'storable');
     }
 
     /**
