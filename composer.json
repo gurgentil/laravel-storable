@@ -38,8 +38,8 @@
                 "Gurgentil\\LaravelStorable\\ServiceProvider"
             ],
             "aliases": {
-                "DeleteCacheFile": "Gurgentil\\LaravelStorable\\GenerateStorableFacade",
-                "GenerateCacheFile": "Gurgentil\\LaravelStorable\\GenerateStorableFacade"
+                "DeleteStorableFile": "Gurgentil\\LaravelStorable\\DeleteStorableFileFacade",
+                "GenerateStorableFile": "Gurgentil\\LaravelStorable\\GenerateStorableFileFacade"
             }
         }
     },
