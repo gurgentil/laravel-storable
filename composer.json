@@ -1,5 +1,12 @@
 {
     "name": "gurgentil/laravel-storable",
+    "keywords": [
+        "laravel",
+        "storage",
+        "storable",
+        "transformer"
+    ],
+    "homepage": "https://github.com/gurgentil/laravel-storable",
     "type": "library",
     "license": "MIT",
     "authors": [
