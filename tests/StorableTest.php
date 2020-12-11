@@ -3,7 +3,6 @@
 namespace Gurgentil\LaravelStorable\Test;
 
 use Gurgentil\LaravelStorable\Test\Doubles\StorableStub;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Storage;
 
 class StorableTest extends TestCase
