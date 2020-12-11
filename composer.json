@@ -1,0 +1,13 @@
+{
+    "name": "gurgentil/laravel-storable",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gustavo Gentil",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
