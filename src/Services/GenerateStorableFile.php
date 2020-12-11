@@ -22,7 +22,7 @@ class GenerateStorableFile
     }
 
     /**
-     * Add cache file to storage.
+     * Write file to storage.
      *
      * @param Storable $storable
      */

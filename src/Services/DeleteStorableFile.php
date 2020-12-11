@@ -22,7 +22,7 @@ class DeleteStorableFile
     }
 
     /**
-     * Remove cache file from storage.
+     * Remove file from storage.
      *
      * @param Storable $storable
      */
