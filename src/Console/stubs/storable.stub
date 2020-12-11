@@ -16,7 +16,7 @@ class DummyClass implements Storable
      *
      * @return string
      */
-    public function getCacheFilePath(): string
+    public function getFilePath(): string
     {
         return ".json";
     }
@@ -26,7 +26,7 @@ class DummyClass implements Storable
      *
      * @return string
      */
-    public function getCacheContents(): string
+    public function getContents(): string
     {
         return json_encode([]);
     }
