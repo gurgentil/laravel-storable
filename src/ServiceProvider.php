@@ -3,10 +3,23 @@
 namespace Gurgentil\LaravelStorable;
 
 use Gurgentil\LaravelStorable\Console\Commands\MakeStorableCommand;
+use Gurgentil\LaravelStorable\Services\DeleteStorableFile;
+use Gurgentil\LaravelStorable\Services\GenerateStorableFile;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
 class ServiceProvider extends IlluminateServiceProvider
 {
+    public function register(): void
+    {
+        $this->app->bind('delete-storable-file', static function () {
+            return new DeleteStorableFile;
+        });
+
+        $this->app->bind('generate-storable-file', static function () {
+            return new GenerateStorableFile;
+        });
+    }
+
     /**
      * Bootstrap the application services.
      */

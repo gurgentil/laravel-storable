@@ -35,7 +35,11 @@
         "laravel": {
             "providers": [
                 "Gurgentil\\LaravelStorable\\ServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "DeleteCacheFile": "DeleteStorableFileFacade",
+                "GenerateCacheFile": "Gurgentil\\LaravelStorable\\GenerateCacheFacade"
+            }
         }
     },
     "minimum-stability": "dev",
