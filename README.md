@@ -5,6 +5,8 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/gurgentil/laravel-storable.svg?style=flat-square)](https://scrutinizer-ci.com/g/gurgentil/laravel-storable)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
+Create storage transformers for your Eloquent models.
+
 ## Installation
 
 Install the package via composer:

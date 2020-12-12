@@ -1,7 +1,9 @@
 {
     "name": "gurgentil/laravel-storable",
+    "description": "A Laravel package to create storage transformers for your models.",
     "keywords": [
         "laravel",
+        "eloquent",
         "storage",
         "storable",
         "transformer"
