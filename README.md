@@ -15,6 +15,77 @@ composer require gurgentil/laravel-storable
 
 ## Usage
 
+Create a storable class:
+
+```bash
+php artisan make:storable StorableUser
+```
+
+```php
+<?php
+
+namespace App\Storables;
+
+use App\Models\User;
+use Gurgentil\LaravelStorable\Storable;
+
+class StorableUser extends Storable
+{
+    /**
+     * @var User
+     */
+    protected $user;
+
+    public function __construct(User $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Get file path in storage.
+     *
+     * @return string
+     */
+    public function getFilePath(): string
+    {
+        return "users/{$this->user->uuid}.json";
+    }
+
+    /**
+     * Get string representation of object to store.
+     *
+     * @return string
+     */
+    public function getContents(): string
+    {
+        return json_encode([
+            'id' => $this->user->id,
+            'email' => $this->user->email,
+            'permissions' => $this->user->permissions->pluck('name')->toArray(),
+        ]);
+    }
+}
+```
+
+```php
+$storable = new StorableUser($user);
+$storable->save();
+```
+
+```php
+$storable = new StorableUser($user);
+$storable->delete();
+```
+
+```dotenv
+STORABLE_DISK = gcs
+```
+
+```php
+$storable = new StorableUser($user);
+$storable->save('gcs');
+```
+
 ## Testing
 
 ``` bash
