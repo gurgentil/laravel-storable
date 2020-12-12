@@ -21,6 +21,8 @@ Create a storable class:
 php artisan make:storable StorableUser
 ```
 
+Define the file path and the object representation you want to store:
+
 ```php
 <?php
 
@@ -67,18 +69,24 @@ class StorableUser extends Storable
 }
 ```
 
+To write the object to storage, simply call `save()` on the object:
+
 ```php
 $storable = new StorableUser($user);
 $storable->save();
 ```
+
+Call `delete()` to remove the file from storage:
 
 ```php
 $storable = new StorableUser($user);
 $storable->delete();
 ```
 
+You can define the disk via environment variable or by passing it to the `save` and `delete` methods:
+
 ```dotenv
-STORABLE_DISK = gcs
+STORABLE_DISK=gcs
 ```
 
 ```php
